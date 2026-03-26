@@ -1,4 +1,16 @@
 """
+Q:: NoSQL
+A:: NoSQL trades structure for scalability + flexibility.
+    
+    - Redis(unreal speed), MongoDB (unstructured), Cassandra(r\w)
+    - No joins
+    - memory lowers, speep goes up
+
+
+Q:: Horizontal scaling
+A:: more machines, not more memory
+
+
 Q:: JOIN types
 A:: - INNER JOIN returns only the rows that have matching values in both tables. If there is no match, 
         the row is not included in the result.

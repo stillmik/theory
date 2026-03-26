@@ -10,8 +10,4 @@ A:: SSH (Secure Shell) = a way to connect to another computer over a network sec
     Private key (.pem file) is stored on my side and used toget access to server.
     1) chmod 400 my-key.pem
     2) ssh -i my_key_path.pem username@ip.ip.ip.ip
-
-
-
-
 """
