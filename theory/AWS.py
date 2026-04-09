@@ -23,7 +23,7 @@ A:: Root user
 
 
 Q:: Connection to AWS
-A:: A user can connect o AWS and manage it viaconsole, to do that you have to set up credentials.
+A:: A user can connect o AWS and manage it via console, to do that you have to set up credentials (access key).
 
 
 Q:: VPC
@@ -34,11 +34,11 @@ A:: Virtual private network is a logically isolated, private network within the 
 
 Q:: Public/private nets
 A:: A subnet is a range of IP addresses in your VPC. You can create AWS resources, such as 
-    EC2 instances, in specific subnets. 
-    Public subnet – The subnet has a direct route to an internet gateway. Resources in a public 
-    subnet can access the public internet.
-    Private subnet – The subnet does not have a direct route to an internet gateway. Resources 
-    in a private subnet require a NAT device to access the public internet.
+        EC2 instances, in specific subnets. 
+    - Public subnet is The subnet has a direct route to an internet gateway. Resources in a public 
+        subnet can access the public internet.
+    - Private subnet is The subnet does not have a direct route to an internet gateway. Resources 
+        in a private subnet require a NAT device to access the public internet.
 
 
 Q:: Lambda
@@ -59,7 +59,7 @@ A:: - Load libs + code file (all are in same package level).
 
 
 Q:: Elastic beanstalk
-A:: Elastic Beanstalk = “just deploy your app, we’ll handle the infrastructure mess.”
+A:: Elastic Beanstalk = “just deploy your app, we'll handle the infrastructure mess.”
     It handles:
         - EC2 instances
         - load balancer
