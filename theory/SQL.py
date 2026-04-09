@@ -11,6 +11,17 @@ Q:: Horizontal scaling
 A:: more machines, not more memory
 
 
+Q:: sharding
+A:: splitting one big database into smaller pieces (shards) and spreading them across multiple machines.
+    - Usually not implemented in SQL datbases cause joining is getting cursed + we need to create a sharding 
+        rule which is not obvious in SQL databases. 
+    - In SQL sharding in smplemented by yourself, in noSQL automatically by DB.
+
+
+Q:: Redis
+A:: Redis = an in-memory key-value database. 
+
+
 Q:: JOIN types
 A:: - INNER JOIN returns only the rows that have matching values in both tables. If there is no match, 
         the row is not included in the result.
