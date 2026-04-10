@@ -34,4 +34,8 @@ A:: 1) Make sure dev is clean
     2) Open a pull request
     3) Then code review happens. People must: request fixes or approve.
     4) CI/CD tests must be passed
+
+
+Q:: GitHub Actions
+A:: ???    
 """

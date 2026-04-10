@@ -20,6 +20,15 @@ A:: Root user
         - You create IAM groups to manage access permissions for multiple users with similar roles 
             or responsibilities. By attaching policies to these groups, you can grant or revoke 
             permissions for entire sets of users.
+            Without groups, you'd do this:
+                - Give Alice S3 access
+                - Give Bob S3 access
+                - Give Kris S3 access
+            Repeat 50 times → welcome to burnout.
+            With groups:
+                - Create group: Developers
+                - Attach policy: S3 access
+                - Add users to group
 
 
 Q:: Connection to AWS
@@ -48,14 +57,22 @@ A:: Lambda is a serverless AWS tool which spinns up when you call the code and s
     - execution is short (<15 min)
 
     
-Q:: How to use lambda
-A:: - Load libs + code file (all are in same package level). 
-    - Pack them in .zip
-    - AWS will handle it automaticly
-    We can test it in AWS
-    - Then we have to create REST API to acess it. Use API gateways -> REST API -> method (attach Lambda).
-    - Copy URL and use CURL to test.
+Q:: Lambda creation
+A:: - Specify runtime (Python 3.14, Node.js, Java, etc.)
+    - Architecture (x86, ARM)
+    - Memory (128 MB to 10 GB)
 
+
+Q:: How to use lambda
+A:: - Load libs + code file (all are in same package level) Pack them into .zip 
+        - upload .zip
+        - upload ZIP → S3 → Lambda references it 
+        - Build Docker image → push to ECR → Lambda runs it
+    - AWS will handle it automaticly.
+    We can test it in AWS.
+    - Then we have to create REST API to acess it. Use API gateways -> REST API -> during setup attach Lambda.
+    - Copy URL and use CURL on created REST API to test.
+    - Use other triggers like S3, DynamoDB, CloudWatch Events, etc.
 
 
 Q:: Elastic beanstalk
@@ -112,7 +129,6 @@ A:: - Retrieve object by URL: http/amazon/BUCKET_NAME/OBJECT_NAME (for public) o
     4) Retrieve from users DB
     5) to CloudFront
     6) Fetch video.png
-
 
 
 Q:: S3 Objects
