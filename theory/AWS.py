@@ -16,6 +16,7 @@ A:: Root user
             permissions. Instead of being uniquely associated with one person, a role is intended 
             to be assumable by anyone who needs it. You can use roles to delegate access to users, 
             applications, or services that don't normally have access to your AWS resources. 
+        - !!! !!! Roles can be assigned to users, applications, or AWS services.
     Groups
         - You create IAM groups to manage access permissions for multiple users with similar roles 
             or responsibilities. By attaching policies to these groups, you can grant or revoke 
@@ -93,11 +94,24 @@ A:: Elastic Beanstalk = “just deploy your app, we'll handle the infrastructure
         - MVPs
         - internal tools
         - startups moving fast
-    * Upload your code via .zip
-    * configure permissions to let it interract with other AWS services
-    * place it in VPC
-    * configure memory, architecture, instance type, 
-    * configure monitoring, alarms
+    
+
+Q:: Elastic Beanstalk deployment
+A:: - Package your code (e.g., .zip, Docker image, code from S3)   
+    - Give it a role to let it interract with other AWS services
+    - Select instance profile for your app (e.g., t2.micro)
+    - place it in VPC
+    - configure memory, architecture, instance type, 
+    - configure monitoring, alarms
+
+
+Q:: Elastic Beanstalk scaling
+A:: - Auto Scaling: Automatically adjusts the number of EC2 instances based on demand.
+    - Load Balancing: Distributes incoming traffic across multiple EC2 instances to ensure
+        high availability and performance.  
+    - Manual Scaling: You can also manually adjust the number of EC2 instances if needed.
+    - Health Monitoring: Beanstalk continuously monitors the health of your application and
+        can automatically replace unhealthy instances to maintain availability.    
 
 
 Q:: S3

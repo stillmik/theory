@@ -117,5 +117,18 @@ A:: - Choose runtime (e.g., .NET, Node.js, Python, Java)
     - Configure deployment options (e.g., GitHub, Azure DevOps, local Git).    
 
 
+Q:: Deployment Slots
+A:: Deployment slot is basically a separate live environment for the same app.
+    - You can have multiple slots (e.g., staging, production).
+    - Each slot receives its code from it's own GitHub branch.
+    - Each slot has its own URL and configuration.
+    - You can deploy to a staging slot, test it, and then swap it with production without downtime.
+
+
+Q:: Azure App Service scaling
+A:: - Scale up: increase the resources (CPU, memory) of the existing instance.
+    - Scale out: increase the number of instances running your app.
+    - Auto-scaling: automatically scale based on predefined rules (e.g., CPU usage, request count).
+    - Manual scaling: you can manually adjust the number of instances or resources as needed.
 
 """
