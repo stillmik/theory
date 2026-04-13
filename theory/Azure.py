@@ -1,4 +1,7 @@
 """
+EntraId identifies not only users but applications. ENtraID assigns roles.
+
+
 Q:: Azure Users
 A:: Azure Users are individual accounts that can be assigned permissions and roles to access Azure resources. 
     - can have a role
@@ -9,6 +12,9 @@ Q:: Azure Roles
 A:: Azure Roles are sets of permissions that can be assigned to users, groups. 
     - built-in roles: pre-defined by Azure (e.g., Owner, Contributor, Reader)
     - custom roles: created by users to fit specific needs
+    Owner - creator of subscription, creates subscriptions, within subscription ypou are always an owner
+    Contributor - assigned by owner czel
+    Reader - popusk
 
 
 Q:: Azure Security Groups
@@ -29,7 +35,7 @@ A:: Azure Subscriptions are the billing and access control units in Azure. They 
 
 
 Q:: Azure Tenant
-A:: ???
+A:: Tenant - like organization. Subs belong to subscriptions.
     
 
 Q:: Azure Virtual Machines
@@ -132,5 +138,112 @@ A:: - Scale up: increase the resources (CPU, memory) of the existing instance.
     - Manual scaling: you can manually adjust the number of instances or resources as needed.
 
 
+Q:: Storage Accounts
+A:: - Storage accounts are wrappers for Azure Storage services, for example Blob Storage, 
+        File Storage, Queue Storage, Table Storage.
+    - Linked to resource group.
+    Storage Account
+    ├── Blob Containers
+    │     ├── files
+    │     ├── images
+    │
+    ├── File Shares
+    ├── Queues
+    ├── Tables    
+    - Inside Azure Storage Account you have:
+        👉 Blob Storage (the whole system)
+        👉 Containers (folders inside it)
+        👉 Blobs (actual files)
 
+
+Q:: Azure Container
+A:: 📁 Container
+    👉 a logical grouping inside Blob Storage
+    - like a folder/bucket
+    - holds blobs (files)
+
+
+Q:: Azure RAG step by step
+A:: 1) Create Resource Group
+    2) Create Storage Account 
+        - Create Storage Account
+        - Go to Blob Storage
+        - Create a Container
+        - Upload your file (CSV, PDF, JSON, etc.)
+    3) Create Azure AI Foundry resource
+        - create
+        - open this resource in Azure AI Foundry
+    4) Go to deployments and create an embeddings model
+        - choose model (e.g., text-embedding-3-small)
+        - specify deployment type
+    5) Create Search Service
+        - create
+        - open this resource
+    6) Click import and vectorize data
+        - select your blob storage data
+        - select your embedding model
+    7) Deploy your RAG app
+        - select base model (e.g., gpt-4o)
+        - add data source (your search service)
+    8) Test your RAG app
+        - use Azure AI Foundry playground to test your app
+    9) You may find a code snippet in Azure AI Foundry to query your Azure RAG.
+
+
+Q:: Fine tuning in Azure
+A:: 1) Create Azure AI Foundry project
+    2) Inside My Assets, click on "Deploy model", select for example "gpt-4o"
+        - Select deployment type: standard, batch
+    3) You may open it in a playground and test it.
+    4) On the left panel, find "Fine-tuning"
+        - Find a model
+        - Add training data (e.g., JSONL file with prompt-completion pairs)
+        - specify training parameters (e.g., epochs, learning rate)
+    5) Wait for training to complete
+    6) Click "Use this model" to deploy.
+
+
+Q:: Azure RAG Agent
+A:: 1) Create Azure AI Foundry project
+    2) Deploy base model (e.g., gpt-4o)
+    3) On the left above fine-tuning, find "Agents", find here your agent
+    4) You can click "Knowledge" and add files knowledge to your agent (e.g., PDF, CSV, JSON) manually.
+    5) Click "actions"
+        - code interpreter - interprets files (.csv, .pdf, .json, .py). It will automatically read the file 
+            and extract information from it.
+    Code::
+    1) Talk to agent via endpoint and angent ID
+
+
+Q:: Tracing in Azure
+A:: 1) Go to tracing in Azure AI Foundry
+        - create tracing resource
+    2) Click "manage data source" and grab a connection string
+    3) In code:
+        - create tracer
+        - add this connection string to your tracing configuration 
+        - with tracer
+            span.set_attribute("key", "value")
+
+
+Q:: Models evaluation in Azure
+A:: 1) On the left panel create a new evaluation project
+    2) Prepare evaluation dataset
+    3) Select "Use your dataset"
+    4) Select model to evaluate (e.g., gpt-4o)
+    5) Make evaluation prompt
+    6) Select evaluation criteria (e.g., accuracy, semantic similarity)
+
+
+Q:: Azure chatbot
+A:: 1) Go to templates and find chatbot template
+        - go to git and copy code
+    2) ???
+
+
+Q:: Push image to Azure Container Registry
+A:: 1) go to Portal Azure and click create Azure Container Registry
+    2) go to CLI and login to Azure
+    4) build your Docker image locally
+    5) "docker push"
 """
