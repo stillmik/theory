@@ -44,8 +44,8 @@ A:: Management groups are containers that help you manage multiple Azure subscri
     They allow you to organize subscriptions into a hierarchy for better governance.
 
 
-Q:: Azure Resource Groups
-A:: Azure Resource Groups are logical containers that hold related Azure resources.
+Q:: Azure Resourse Groups
+A:: Azure Resourse Groups are logical containers that hold related Azure resources.
 
 
 Q:: Virtual Network (VNet)
@@ -130,5 +130,7 @@ A:: - Scale up: increase the resources (CPU, memory) of the existing instance.
     - Scale out: increase the number of instances running your app.
     - Auto-scaling: automatically scale based on predefined rules (e.g., CPU usage, request count).
     - Manual scaling: you can manually adjust the number of instances or resources as needed.
+
+
 
 """

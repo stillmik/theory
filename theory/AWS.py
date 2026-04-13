@@ -147,4 +147,7 @@ A:: - Retrieve object by URL: http/amazon/BUCKET_NAME/OBJECT_NAME (for public) o
 
 Q:: S3 Objects
 A:: big files, small files, text, media, code, spreadsheets, database backups, etc.
+
+
+
 """
