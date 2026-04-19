@@ -149,5 +149,6 @@ Q:: S3 Objects
 A:: big files, small files, text, media, code, spreadsheets, database backups, etc.
 
 
-
+Q:: Amazon Kinesis Data Stream
+A:: 
 """

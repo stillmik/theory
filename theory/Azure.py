@@ -112,7 +112,7 @@ A:: Azure App Service is a platform which offers auto scaling, load balancing, a
     - CI/CD built-in Direct deploy from GitHub / Azure DevOps. 
     - GitHub actions
     - integrated with Azure services (e.g., Azure SQL Database, Azure Storage).
-    
+
 
 Q:: Azure App service creation
 A:: - Choose runtime (e.g., .NET, Node.js, Python, Java)
@@ -246,4 +246,7 @@ A:: 1) go to Portal Azure and click create Azure Container Registry
     2) go to CLI and login to Azure
     4) build your Docker image locally
     5) "docker push"
+
+
+
 """
