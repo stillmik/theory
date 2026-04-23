@@ -150,5 +150,5 @@ A:: big files, small files, text, media, code, spreadsheets, database backups, e
 
 
 Q:: Amazon Kinesis Data Stream
-A:: 
+A::     
 """

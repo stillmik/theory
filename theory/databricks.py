@@ -36,4 +36,7 @@ A:: ETL = Extract → Transform → Load
     It's just a process that moves data from one place to another... but makes it actually usable on the way.
 
 cars stream data into kinesis data stream, which is the landing zone.
+
+
+
 """
